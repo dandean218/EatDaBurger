@@ -10,18 +10,16 @@
     margin-bottom: -20px;
 }
 
-.burgers-to-eat{
+.burger-div-1{
     margin-top: 40px;
     margin-left: 40px; 
     display:block;
+} 
 
-}
-
-.burgers-eaten{
+.burger-div-2{
     margin-top: 40px;
     margin-right: 40px;
     display:block;
-
 }
 
 #Vito-title{

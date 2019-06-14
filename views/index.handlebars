@@ -1,13 +1,15 @@
-<div class = "container">
+<div class = "container burger-wrapper">
     <div class = "row">
         <div class = "col-md-12 text-center" id="top-nav-bar">
             <img src = "/assets/img/hamburger.png" id = "burger-img" alt = "burger" />
             <h1 id="Vito-title">Vito's Hamburger Heaven</h1>
         </div>
 
-        <div class = "col-md-6 text-center" class = "burgers-to-eat">
+        <div class = "col-md-6 text-center burgers-to-eat" class = "burger-div-1">
             <div class = "row">
                 <h2 id="burger-eat">Burgers to Eat!</h2>
+            </div>
+            <div class = "row">
                     <ul id="list-o-burgers">
                         {{#each burgers}}
                             {{#unless devoured}}
@@ -20,9 +22,11 @@
             </div>
         </div>
 
-        <div class = "col-md-6 text-center" class = "burgers-eaten">
+        <div class = "col-md-6 text-center burgers-eaten" class = "burger-div-2">
             <div class = "row">
                 <h2 id="burgers-eaten">Burgers in the Belly!</h2>
+            </div>
+            <div class = "row">
                     <ul id="list-o-eaten-burgers">
                         {{#each burgers}}
                             {{#if devoured}}
