@@ -20,18 +20,19 @@ router.get("/burgers", function (req, res){
 });
 
 router.post("/burgers/create", function (req, res) {
-    burger.insertOne("burger_name", [req.body.burger], function (){
+    burger.insertOne("burger_name", [req.body.burger_name], function (){
         res.redirect('/');
     });
 });
 
 router.put('/burgers/:id', function (req, res){
-    const condition = "id" + req.params.id;
+    const condition = "id = " + req.params.id;
 
     console.log("condition", condition);
-
+    console.log(req.body);
     burger.updateOne({
-        devoured: req.body.devoured},
+        devoured: req.body.devoured == "true" ? 1 : 0},
+        // devoured: req.body.devoured},
         condition, function(data){
         if(data.changedRows == 0){
             return res.status(404).end();

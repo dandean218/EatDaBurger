@@ -38,7 +38,7 @@ const orm = {
         });
     },
     insertOne: function (table, cols, vals, cb) {
-        const queryString = "INSERT INTO" + table;
+        let queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();
@@ -58,7 +58,7 @@ const orm = {
     },
     
     updateOne:function (table, objColVals, condition, cb) {
-        const queryString = "UPDATE " + table;
+        let queryString = "UPDATE " + table;
         
         queryString += " SET ";
         queryString += objToSQL (objColVals);

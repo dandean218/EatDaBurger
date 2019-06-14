@@ -1,0 +1,75 @@
+.container{
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px
+}
+
+#burger-img {
+    height: 150px;
+    margin-bottom: -20px;
+}
+
+.burgers-to-eat{
+    margin-top: 40px;
+    margin-left: 40px; 
+    display:block;
+
+}
+
+.burgers-eaten{
+    margin-top: 40px;
+    margin-right: 40px;
+    display:block;
+
+}
+
+#Vito-title{
+    margin: 40px
+}
+
+#top-nav-bar{
+    background-color: red
+}
+
+.row{
+    background-color: gold
+}
+
+#bottom-nav-bar{
+    background-color:red
+}
+
+#burger-eat{
+    text-align:center;
+    margin: auto;
+    padding-top: 15px
+}
+
+#burgers-eaten{
+    text-align: center;
+    margin:auto;
+    padding-top: 15px
+}
+
+#list-o-burgers{
+    padding-top:15px;
+    margin:auto;
+}
+
+#list-o-eaten-burgers{
+    padding-top:15px;
+    margin:auto
+}
+
+#burger-input{
+    color:red;
+    background-color: gold;
+    border-color:red;
+    margin-top:15px;
+    margin-bottom:15px
+}
+
+#fillable-field{
+    margin-top:15px;
+}

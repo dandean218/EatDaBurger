@@ -1,17 +1,18 @@
 <div class = "container">
     <div class = "row">
         <div class = "col-md-12 text-center" id="top-nav-bar">
-            <img src = "public/assets/img/hamburger.png" alt = "burger" />
-            <h1>EAT DA BURGER!</h1>
+            <img src = "/assets/img/hamburger.png" id = "burger-img" alt = "burger" />
+            <h1 id="Vito-title">Vito's Hamburger Heaven</h1>
         </div>
+
         <div class = "col-md-6 text-center" class = "burgers-to-eat">
             <div class = "row">
-                <h2>Burger to Eat!</h2>
-                    <ul>
+                <h2 id="burger-eat">Burgers to Eat!</h2>
+                    <ul id="list-o-burgers">
                         {{#each burgers}}
                             {{#unless devoured}}
                                 <li>
-                                    <p>{{id}}. {{burger_name}} <button class = "eat-it" data-burgerid ="{{id}}"> EAT IT!</button></p>
+                                    <p>{{id}}. {{burger_name}} <button class = "devour" data-burgerid ="{{id}}"> EAT IT!</button></p>
                                 </li>
                             {{/unless}}
                         {{/each}}
@@ -21,8 +22,8 @@
 
         <div class = "col-md-6 text-center" class = "burgers-eaten">
             <div class = "row">
-                <h2>Burgers in the Belly!</h2>
-                    <ul>
+                <h2 id="burgers-eaten">Burgers in the Belly!</h2>
+                    <ul id="list-o-eaten-burgers">
                         {{#each burgers}}
                             {{#if devoured}}
                                 <li>
@@ -35,16 +36,15 @@
         </div>
     </div>
 
-    <div class = "container">
+    <div class = "container" id="form-bottom">
         <div class = "row">
-            <div class = "col-md-12 text-center enter_selection">
+            <div class = "col-md-12 text-center enter_selection" id="bottom-nav-bar">
                 <form action= "/burgers/create" method = "POST">
-                    <input type="text" class="form-control" name="burger-name" value = "" id + "enter_burger">
-                    <button type = "submit" class="btn btn-primary" id="burger-input">Add a Burger</button>
+                    <input type="text" class="form-control" id="fillable-field" name="burger_name" value = "" id + "enter_burger">
+                    <button type = "submit" class="btn btn-primary" id="burger-input"><strong>Add a Burger</strong></button>
                 </form>
-                <p>Enter a burger you want to eat, then click the 'Add a Burger' button.</p>
+                <p><strong>Enter a burger you want to eat, then click the 'Add a Burger' button.</strong></p>
             </div>
         </div>
     </div>
-
 </div>

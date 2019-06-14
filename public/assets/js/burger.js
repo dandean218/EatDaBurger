@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $(".devour").on("click", function(){
         const id = $(this).data("burgerid");
